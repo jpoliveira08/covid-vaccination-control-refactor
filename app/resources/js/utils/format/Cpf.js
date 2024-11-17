@@ -19,8 +19,8 @@ const cpfMask = (input) => {
 }
 
 const FormatCpfInput = (input) => {
-    input.addEventListener("input", function () {
-        cpfMask(this);
+    input.addEventListener("input", () => {
+        cpfMask(input);
     });
 }
 

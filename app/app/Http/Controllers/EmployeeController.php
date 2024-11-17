@@ -29,7 +29,15 @@ class EmployeeController extends Controller
 
     public function edit(Employee $employee): View
     {
-        return view('employee.edit', compact('employee'));
+        $vaccinations = old('vaccines', $employee->vaccines->map(function ($vaccine) {
+            return [
+                'id_vaccine' => $vaccine->id ?? null,
+                'dose_date' => $vaccine->pivot->dose_date ?? null,
+                'dose_number' => $vaccine->pivot->dose_number ?? null,
+            ];
+        })->toArray());
+
+        return view('employee.edit', compact('employee', 'vaccinations'));
     }
 
     public function delete(Employee $employee): View

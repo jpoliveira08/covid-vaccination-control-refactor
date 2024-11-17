@@ -10,7 +10,6 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/vaccine/index.js',
                 'resources/js/employee/index.js',
-                'resources/js/employee/edit.js'
             ],
             refresh: true,
         }),
