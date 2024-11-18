@@ -10,6 +10,7 @@ const EmployeeVaccineRepeater = async () => {
             vaccineSelect,
             `vaccines[${vaccineInputNumber}][id_vaccine]`
         );
+        vaccineInputNumber++;
     });
 
     const repeaterContainer = document.getElementById('vaccineRepeaterContainer');

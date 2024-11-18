@@ -3,7 +3,7 @@ import VaccineSearch from '../VaccineSearch.js';
 const InitializeVaccineVirtualSelect = async (element, inputName) => {
     let vaccineId = element.dataset.vaccineId;
     let options = {};
-
+    console.log(vaccineId);
     if (vaccineId) {
         try {
             const response = await fetch(`/vaccine/${vaccineId}`);

@@ -5,16 +5,16 @@
                 <label class="form-label d-block">Vaccine description</label>
                 <div
                     class="vaccineSelect"
-                    data-vaccine-id="@isset($vaccination['id_vaccine']) {{ $vaccination['id_vaccine'] }} @endisset"
+                    data-vaccine-id="@isset($vaccination['id_vaccine']){{$vaccination['id_vaccine']}}@endisset"
                 ></div>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Dose date</label>
-                <input type="date" class="form-control" name="vaccines[{{$i}}][dose_date]" @isset($vaccination['dose_date']) value="{{$vaccination['dose_date']}}" @endisset">
+                <input type="date" class="form-control" name="vaccines[{{$i}}][dose_date]" value="@isset($vaccination['dose_date']){{$vaccination['dose_date']}}@endisset">
             </div>
             <div class="col-md-2">
                 <label class="form-label">Dose number</label>
-                <input type="number" class="form-control" name="vaccines[{{$i}}][dose_number]" @isset($vaccination['dose_number']) value="{{$vaccination['dose_number']}}" @endisset>
+                <input type="number" class="form-control" name="vaccines[{{$i}}][dose_number]" value="@isset($vaccination['dose_number']){{$vaccination['dose_number']}}@endisset">
             </div>
             <div class="col-md-1">
                 <label class="form-label"></label>

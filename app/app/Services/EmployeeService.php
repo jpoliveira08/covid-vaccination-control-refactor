@@ -38,7 +38,7 @@ class EmployeeService
             $employee->update($employeeData);
 
             if ($vaccines) {
-                $employee->vaccines()->sync($vaccines);
+                $employee->vaccines()->sync($vaccines, true);
             }
         });
     }

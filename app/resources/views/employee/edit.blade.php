@@ -30,7 +30,7 @@
             @enderror
         </x-slot:inputEmployeeBirthDate>
         <x-slot:inputEmployeeHasComorbidity>
-            <input type="checkbox" class="form-check-input @error('has_comorbidity') is-invalid @enderror" @checked(old('has_comorbidity', $employee->has_comorbidity)) id="has-comorbidity" name="has_comorbidity">
+            <input type="checkbox" class="form-check-input @error('has_comorbidity') is-invalid @enderror" @checked(old('has_comorbidity', $employee->has_comorbidity)) value="{{ old('has_comorbidity', $employee->has_comorbidity) }}" id="has-comorbidity" name="has_comorbidity">
             @error('has_comorbidity')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

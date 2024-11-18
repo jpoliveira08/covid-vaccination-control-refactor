@@ -31,7 +31,7 @@ class EmployeeController extends Controller
     {
         $vaccinations = old('vaccines', $employee->vaccines->map(function ($vaccine) {
             return [
-                'id_vaccine' => $vaccine->id ?? null,
+                'id_vaccine' => $vaccine->pivot->id_vaccine ?? null,
                 'dose_date' => $vaccine->pivot->dose_date ?? null,
                 'dose_number' => $vaccine->pivot->dose_number ?? null,
             ];
